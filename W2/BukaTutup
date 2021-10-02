@@ -1,0 +1,29 @@
+import java.util.Scanner;
+/**
+ *
+ * @author ASUS
+ */
+public class BukaTutupJalan {
+    public static void main (String[]args){
+        Scanner input = new Scanner(System.in);
+        long total;
+        System.out.println("Masukan Plat : xxxx-xxxx-xxxx-xxxx");
+        String inPlat = null;
+            input.hasNext();
+            for(int i=0;i<4;i++) {
+                    if(inPlat==null)
+                            inPlat = input.next();
+                    else
+                            inPlat = inPlat + input.next();
+            }
+       
+        total = Long.parseLong(inPlat);
+          System.out.println(+total);
+        if((total-999999)%5==0){
+            System.out.println("Berhenti");
+        }else{
+            System.out.println("Jalan");
+        }
+        input.close();
+    }
+}
