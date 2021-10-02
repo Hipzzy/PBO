@@ -1,0 +1,21 @@
+import java.util.Scanner;
+/**
+ *
+ * @author ASUS
+ */
+public class InputOutput {
+   public static void main (String [] args){
+       Scanner input = new Scanner(System.in);
+       System.out.println("Masukan Kata yang ingin dipisah : ");
+        String str = input.nextLine();
+        input.close();
+       
+        String splits[] = str.split("[!,?._'@ ]");
+       
+        System.out.println(splits.length);
+        for (String bagian : splits) {
+            System.out.println(bagian);
+        }
+
+    }
+   }
