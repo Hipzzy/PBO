@@ -1,0 +1,40 @@
+import java.util.Scanner;
+/**
+ *
+ * @author ASUS
+ */
+public class GajiAgent {
+    public static void main (String []args){
+       Scanner input = new Scanner(System.in);
+        int gajiPokok = 500000;
+       int hargaItem = 50000;
+       int minimal = 15 ; 
+       int jumlahItem ;
+       int proses;
+       int total;
+       
+       System.out.println("Pengecek Pendapatan ");
+       System.out.println("Masukan total penjualan item : ");
+       jumlahItem = input.nextInt();
+       
+       if(jumlahItem >= 15 && jumlahItem < 40){
+           proses = jumlahItem * 5000;
+           total = gajiPokok + proses;
+           System.out.println("Total gaji anda sebesar : " + total);
+       }else if (jumlahItem >= 40 && jumlahItem < 80){
+           proses = jumlahItem * hargaItem;
+           total = (gajiPokok+(proses * 25/100));
+           System.out.println("Total gaji anda sebesar : " + total);        
+       }else if (jumlahItem >= 80){
+           proses = jumlahItem * hargaItem;
+           total = (gajiPokok+(proses * 35/100));
+           System.out.println("Total gaji anda sebesar : " + total);     
+       }else if(jumlahItem < 15){
+           proses = ((minimal - jumlahItem)*hargaItem);
+           total = (gajiPokok-(proses * 15/100));
+           System.out.println("Total gaji anda sebesar : " + total);     
+       }else{
+           System.out.println("Sekian Terima Kasih");     
+       }
+    }
+}
