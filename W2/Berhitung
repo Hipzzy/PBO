@@ -1,0 +1,58 @@
+import java.util.Scanner;
+/**
+ *
+ * @author ASUS
+ */
+public class Berhitung {
+    
+    public static void main(String[]args){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Kalkulator sederhana");
+                int A,B,pilihan,hasil = 0;
+        System.out.println("1.Pertambahan");
+        System.out.println("2.Pengurangan");
+        System.out.println("3.Perkalian");
+        System.out.println("4.Pembagian");
+        System.out.println("5.Modulus");
+        
+        System.out.println("Masukan Pilihan anda : ");
+         pilihan = input.nextInt();
+        
+        switch(pilihan){
+            case 1 : System.out.println("Masukan Nilai Pertama : ");
+                    A = input.nextInt();
+                    System.out.println("Masukan nilai Kedua : ");
+                    B = input.nextInt();
+                    hasil = A + B;
+                    break;
+            case 2 : System.out.println("Masukan Nilai Pertama : ");
+                    A = input.nextInt();
+                    System.out.println("Masukan nilai Kedua : ");
+                    B = input.nextInt();
+                    hasil = A - B;
+                    break;
+            case 3 : System.out.println("Masukan Nilai Pertama : ");
+                    A = input.nextInt();
+                    System.out.println("Masukan nilai Kedua : ");
+                    B = input.nextInt();
+                    hasil = A * B;
+                    break;
+            case 4 : System.out.println("Masukan Nilai Pertama : ");
+                    A = input.nextInt();
+                    System.out.println("Masukan nilai Kedua : ");
+                    B = input.nextInt();
+                    hasil = A / B;
+                    break;
+            case 5 : System.out.println("Masukan Nilai Pertama : ");
+                    A = input.nextInt();
+                    System.out.println("Masukan nilai Kedua : ");
+                    B = input.nextInt();
+                    hasil = A % B;
+                    break;
+            default : System.out.println(" Salah Memasukan Pilihan ");
+        }
+        
+        System.out.println(" Hasil : "+hasil);
+    }
+}
