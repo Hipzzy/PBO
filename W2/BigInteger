@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+/**
+ *
+ * @author ASUS
+ */
+public class BigNumber {
+    public static void main(String[]args){
+        Scanner input = new Scanner (System.in);
+        BigInteger A,B,jumlah,kali;
+        
+        System.out.println("Masukan Nilai BigInteger A");
+        A = input.nextBigInteger();
+        System.out.println("Masukan Nilai BigInteger B");
+        B = input.nextBigInteger();
+        
+        jumlah = A.add(B);
+        kali =A.multiply(B);
+        
+        System.out.println("Hasil Pernjumlahan BigInteger A + B : ");
+        System.out.println(jumlah);
+        System.out.println("Hasil Perkalian BigInteger A + B : ");
+        System.out.println(kali);
+        
+    }
+}
