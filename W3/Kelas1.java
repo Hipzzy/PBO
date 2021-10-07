@@ -1,0 +1,16 @@
+public class Kelas1 {
+        static {
+        System.out.println(11);
+        }
+        static
+        {
+        System.out.println(2);
+        }
+        public Kelas1(int i){
+        System.out.println(3);
+        }
+        
+        public Kelas1(){
+        System.out.println(4);
+    }
+}
